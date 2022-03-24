@@ -6,9 +6,6 @@ const response = document.querySelector("p");
 
 const mousemove = document.querySelector(".mousemove");
 
-const keypressContainer = document.querySelector(".keypress");
-const key = document.getElementById("key");
-
 questionContainer.addEventListener("click", () => {
   questionContainer.classList.toggle("question_clicked");
 });
@@ -54,6 +51,13 @@ response.addEventListener("mouseover", () => {
   response.style.transform = "rotate(2deg)";
 });
 
+
+//---------------------------------------------------
+// keypress events
+
+const keypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
 document.addEventListener("keypress", (e) => {
   key.textContent = e.key;
 
@@ -62,6 +66,6 @@ document.addEventListener("keypress", (e) => {
   } else if (e.key === "h") {
     keypressContainer.style.background = "teal";
   } else {
-    keypressContainer.style.backgroung = "black";
+    keypressContainer.style.background = "black";
   }
 });
