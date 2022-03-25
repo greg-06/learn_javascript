@@ -58,6 +58,13 @@ response.addEventListener("mouseover", () => {
 const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
 
+const ring = (key) => {
+  const audio = new Audio();
+  audio.src = key + ".mp3";
+  audio.play();
+
+}
+
 document.addEventListener("keypress", (e) => {
   key.textContent = e.key;
 
@@ -68,4 +75,25 @@ document.addEventListener("keypress", (e) => {
   } else {
     keypressContainer.style.background = "black";
   }
+
+  ring(e.key);
 });
+
+
+
+//--------------------------------------------------
+// sroll Event
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  
+  if (window.scrollY > 120) {
+    nav.style.top = 0
+  } else {
+    nav.style.top = "-50px"
+  }
+});
+
+//--------------------------------------------------
+
