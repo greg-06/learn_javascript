@@ -12,12 +12,12 @@ questionContainer.addEventListener("click", () => {
 
 btn1.addEventListener("click", () => {
   response.classList.add("show_response");
-  response.style.background = "green";
+  response.style.background = "red";
 });
 
 btn2.addEventListener("click", () => {
   response.classList.add("show_response");
-  response.style.background = "red";
+  response.style.background = "green";
 });
 
 btn3.addEventListener("click", () => {
@@ -44,7 +44,7 @@ questionContainer.addEventListener("mouseenter", () => {
 });
 
 questionContainer.addEventListener("mouseout", () => {
-  questionContainer.style.background = "black";
+  questionContainer.style.background = "grey";
 });
 
 response.addEventListener("mouseover", () => {
@@ -96,4 +96,41 @@ window.addEventListener("scroll", () => {
 });
 
 //--------------------------------------------------
+// Form Events
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector("select");
+const form = document.querySelector("form")
+let pseudo = "";
+let language = "";
+
+
+inputName.addEventListener("input", (e) => {
+  pseudo = e.target.value;
+});
+
+select.addEventListener("input", (e) => {
+  language = e.target.value;
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("YESSSSSSSSSSSSS");
+
+  if (cgv.checked) {
+    document.querySelector('form > div').innerHTML = `
+    <h3>Pseudo : ${pseudo}</h3>
+    <h4>Niveau choisi : ${language}</h4>
+
+    `;
+  } else {
+    alert('Veuillez confirmer votre choix')
+  }
+})
+
+//-----------------------------------------------------
+// addEventListener VS onclick
+document.body.onclick = function() {
+  console.log("Click_moi_ça !")
+};
+
 
