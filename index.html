@@ -7,6 +7,7 @@
     <script defer src="./train.js"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Learn Javascript</title>
+    
 </head>
 
 <body>
@@ -17,6 +18,7 @@
         <button id="btn_2">Egon</button>
         <button id="btn_3">Ray</button>
         <p>La bonne réponse est Egon</p>
+        <p>C'est la bonne réponse !</p>
     </div>
 
     <div class="mousemove"></div>
@@ -32,6 +34,24 @@
             <li>Contact</li>
         </ul>
     </nav>
+
+    <form action="" class="box" >
+        <input type="text" placeholder="Entrez votre nametag">
+        <select>
+            <option value="">Sélectionnez votre niveau</option>
+            <option value="Etudiant">Etudiant</option>
+            <option value="Scientifique">Scientifique</option>
+            <option value="Ghostbusters">Ghostbusters</option>
+        </select>
+        
+        <input type="checkbox" id="cgv">        
+        <label for="cgv">Accepter de croiser les effluves...</label>
+    
+        <input type="submit" value="Valider">
+        <div></div>
+    </form>
+
+    <button onclick="window.print()">Print this page</button>
 
 </body>
 </html>
